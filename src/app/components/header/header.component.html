@@ -1,0 +1,22 @@
+<header id="header" class="container-fluid row d-flex justify-content-between align-items-start align-items-sm-center">
+  <div class="logo col mt-4 mb-4 ms-4"><img class="logo-arg" src="../assets/img/arg-programa.png" alt=""></div>
+<nav class="container-fluid row col-xl-5 col-md-8 col-sm-9 mt-4 mb-4 d-none d-sm-flex">
+  <li  class="col text-center"><a href="#about" class="nav-link">About me</a></li>
+  <li  class="col text-center"><a href="#work" class="nav-link">My work</a></li>
+  <li  class="col text-center"><a href="#education" class="nav-link ">Education</a></li>
+  <li  class="col text-center"> <a href="/login" ><i class="purple bi bi-person-fill nav-link" (click)="login()" *ngIf="!isLogged"></i></a></li>
+  <li  class="col text-center"> <a href="" ><i class="purple bi bi-door-closed-fill nav-link" (click)="onLogOut()" *ngIf="isLogged"></i></a></li>
+
+</nav>
+<nav class="mobile mt-4 d-block d-sm-none container text-end col-8 ">
+  <i class="bi bi-list white"></i>
+  <ul class="d-none menu-mobile">
+  <li  class="col-5 text-center mb-2 mt-2"><a href="#about" class="nav-link">About me</a></li>
+  <li  class="col-5 text-center mb-2 mt-2"><a href="#work" class="nav-link">My work</a></li>
+  <li  class="col-5 text-center mb-2 mt-2"><a href="#education" class="nav-link ">Education</a></li>
+  <li  class="col-5 text-center mb-2 mt-2"> <a href="" ><i class="purple bi bi-person-fill nav-link"></i></a></li>
+
+</ul>
+
+</nav>
+</header>

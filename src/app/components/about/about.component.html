@@ -1,0 +1,29 @@
+<section  class="about-me m-auto mt-10">
+  <div id="about"></div>
+  <h3 class="green text-center mb-4 mt-5 section-title">About me</h3>
+  <button type="button" class="btn btn-outline-secondary mb-5 d-block col-5 col-md-3 col-lg-2 m-auto" routerLink="/editabout/1" *ngIf="isLogged">
+    Editar
+  </button>
+
+  <div class="container flex-column d-flex m-auto">
+      <div class="about container d-flex flex-column col-10  col-lg-6 col justify-content-center col-5">
+          <img class="col-7 align-self-center avatar" src="{{persona?.img}}" alt="">
+          <p class="purple mt-5 description">
+            {{persona?.nombre}} {{persona?.apellido}}
+            <br>
+           {{persona?.descripcion}}
+
+
+              </p>
+      </div>
+      <div class="skills container row col-sm-8 col-md-10 col-lg-10 ms-auto me-auto mt-5">
+
+
+
+
+      </div>
+
+  </div>
+  <app-skill></app-skill>
+
+</section>

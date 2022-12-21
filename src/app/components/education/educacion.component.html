@@ -1,0 +1,33 @@
+<section  class="education container  mt-10 ">
+  <div id="education"></div>
+  <h3 class="green text-center section-title">Education</h3>
+  <div class="container d-flex flex-column col-12 col-lg-7 mt-5" >
+      <div class="school flex-column align-items-center container mb-5 col-12 row col-lg-11">
+
+
+        <button type="button"  class="btn btn-outline-secondary mb-4 m-auto col-7 col-md-3" routerLink="/nuevaeducacion" *ngIf="isLogged"><i class="bi bi-plus-circle pink"></i> Añadir educación </button>
+
+
+        <div *ngFor="let Educacion of educacion" class="school container col-11 d-flex flex-column align-items-center flex-md-row align-items-md-center flex-row mt-1 mb-md-5">
+
+          <div class="col-lg-2 img-logo mb-3 mt-5 mt-md-0">
+              <img class="col-2" src="{{Educacion.imgE}}" [ngStyle]="{'width':'60px'}" alt="digital-house-logo">
+          </div>
+          <div class="col-10 col-sm-6 title mb-4 m-auto">
+              <h6 class="purple text-center">{{Educacion.nombreE}}</h6>
+              <p class="purple text-center">{{Educacion.descripcionE}}</p>
+            </div>
+            <div class="buttons-edit-delete d-flex flex-row col-6 col-md-1 flex-md-column justify-content-between m-auto" *ngIf="isLogged">
+              <button class="btn btn-outline-secondary" routerLink="/editareducacion/{{Educacion.id}}"> <i class="bi bi-pen-fill pink"></i></button>
+             <button class="btn btn-outline-secondary" (click)="delete(Educacion.id)"><i class="bi bi-trash3-fill pink"></i></button>
+            </div>
+
+          </div>
+
+
+</div>
+
+      </div>
+
+
+</section>

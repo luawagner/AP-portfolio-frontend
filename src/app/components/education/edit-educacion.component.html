@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="formulario">
+     <h1 class="green text-center mb-4">Edita esta educación</h1>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+
+        <div class="form-group">
+          <label class="white" for="nombreE">Nombre:</label>
+          <input name="nombreE" id="nombreE" type="text" class="form-control" [(ngModel)]="educacion.nombreE" required>
+
+        </div>
+        <div class="form-group">
+          <label class="white" for="descripcionE">Descripción:</label>
+          <textarea class="form-control" id="descripcionE" name="descripcionE" rows="3" [(ngModel)]="educacion.descripcionE" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="white" for="imgE">Imagen: Aguarde a que la previsualización de imagen cargue.</label>
+          <input name="imgE" id="imgE" type="file" class="form-control" (ngModel)="educacion.imgE" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+        </div>
+<br>
+        <div class="imagen">
+          <img [src]="imageService.url" width="200px">
+        </div>
+
+        <button class="btn btn-primary">Agregar educación</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+

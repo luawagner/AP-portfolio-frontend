@@ -1,0 +1,36 @@
+<section class="projects m-auto mt-10 me-5 col-12">
+  <div id="work"></div>
+<h3 class="green text-center section-title mb-5">My work</h3>
+<button type="button"  class="btn btn-outline-secondary d-block m-auto " routerLink="/nuevoproyecto" *ngIf="isLogged"><i class="bi bi-plus-circle pink"></i> Añadir proyecto </button>
+<div class="container mt-5 d-flex flex-column flex-md-row  flex-wrap  justify-content-around col-12 m-auto" style="width: 80%">
+  <div *ngFor="let Project of project">
+  <div class="col-md-4 card mb-4" style="width: 18rem;">
+      <img src="{{Project.imgP}}" class="card-img-top" alt="...">
+      <div class="card-body">
+          <div class="title-card row">
+              <h5 class="card-title col green d-flex">{{Project.nombreP}}</h5>
+              <div class="icons-card col-7 text-end">
+                <img src="../assets/img/png/node-js.png" alt="">
+                <img src="../assets/img/png/js.png" alt="">
+                <img src="../assets/" alt="">
+              </div>
+            </div>
+        <p class="card-text purple">{{Project.descriptionP}}</p>
+       <div class="buttons row card-body">
+        <a href="#" class="btn btn-outline-secondary col-8">Ver proyecto</a> <i class="iconos bi bi-github col purple text-end"><a href="{{Project.githubP}}"></a></i>
+      </div>
+
+      <div class="buttons-edit-delete d-flex justify-content-between col-5" *ngIf="isLogged">
+        <button class="btn btn-outline-secondary" routerLink="/editarproyecto/{{Project.id}}"> <i class="bi bi-pen-fill pink"></i></button>
+       <button class="btn btn-outline-secondary" (click)="delete(Project.id)"><i class="bi bi-trash3-fill pink"></i></button>
+      </div>
+
+    </div>
+    </div>
+
+
+
+
+    </div>
+    </div>
+</section>
