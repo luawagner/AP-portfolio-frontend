@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Project } from '../model/project';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SProjectService {
-proURL = 'http://localhost:8080/projects/'
+  URLprod=environment.URL
+proURL = this.URLprod + '/projects/'
 
   constructor(private httpClient: HttpClient) { }
 public lista(): Observable<Project[]>{
