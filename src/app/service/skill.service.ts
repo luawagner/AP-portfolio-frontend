@@ -9,7 +9,7 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
   URLprod = environment.URL
-  URL = this.URLprod + '/skill/';
+  URL = this.URLprod + 'skill/';
 
   constructor(private httpClient: HttpClient) { }
 

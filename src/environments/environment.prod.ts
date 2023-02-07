@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-ZSMBEKSXP9',
   }, */
   production: true,
-  URL: "https://ap-portfolio-backend-production-9ff1.up.railway.app"
+  URL: "https://backend-portfoliolaw.onrender.com/"
 };

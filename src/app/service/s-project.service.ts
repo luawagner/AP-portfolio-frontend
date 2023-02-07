@@ -9,7 +9,7 @@ import { Project } from '../model/project';
 })
 export class SProjectService {
   URLprod=environment.URL
-proURL = this.URLprod + '/projects/'
+proURL = this.URLprod + 'projects/'
 
   constructor(private httpClient: HttpClient) { }
 public lista(): Observable<Project[]>{

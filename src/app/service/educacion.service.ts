@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class EducacionService {
   URLprod = environment.URL
-URL = this.URLprod + '/educacion/';
+URL = this.URLprod + 'educacion/';
 constructor(private httpClient : HttpClient) { }
 
 public lista(): Observable<Educacion[]>{

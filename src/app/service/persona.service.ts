@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class PersonaService {
   URLprod = environment.URL
-URL = this.URLprod + '/personas/';
+URL = this.URLprod + 'personas/';
 constructor(private httpClient : HttpClient) { }
 
 

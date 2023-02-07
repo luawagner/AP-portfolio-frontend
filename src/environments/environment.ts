@@ -13,7 +13,8 @@ export const environment = {
     messagingSenderId: '1077418906421',
     measurementId: 'G-ZSMBEKSXP9',
   },
-  production: false
+  production: false,
+  URL: "http://localhost:8080/"
 };
 
 /*
