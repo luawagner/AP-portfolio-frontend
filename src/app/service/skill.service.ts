@@ -8,7 +8,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URLprod = environment.URL
+  URLprod = "https://backend-portfoliolaw.onrender.com/"
   URL = this.URLprod + 'skill/';
 
   constructor(private httpClient: HttpClient) { }

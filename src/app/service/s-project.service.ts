@@ -8,24 +8,24 @@ import { Project } from '../model/project';
   providedIn: 'root'
 })
 export class SProjectService {
-  URLprod=environment.URL
-proURL = this.URLprod + 'projects/'
+  URLprod = "https://backend-portfoliolaw.onrender.com/"
+URL = this.URLprod + 'projects/'
 
   constructor(private httpClient: HttpClient) { }
 public lista(): Observable<Project[]>{
-  return this.httpClient.get<Project[]>(this.proURL + 'lista')
+  return this.httpClient.get<Project[]>(this.URL + 'lista')
 }
-public detail(id:number): Observable <Project>{
-  return this.httpClient.get<Project>(this.proURL + `detail/${id}`);
+public detail(id: number): Observable <Project>{
+  return this.httpClient.get<Project>(this.URL + `detail/${id}`);
 }
 public save(project: Project): Observable<any>{
-  return this.httpClient.post<any>(this.proURL + 'create', project);
+  return this.httpClient.post<any>(this.URL + 'create', project);
 }
-public update(id:number, project: Project): Observable<any>{
-  return this.httpClient.put<any>(this.proURL + `update/${id}`, project);
+public update(id: number, project: Project): Observable<any>{
+  return this.httpClient.put<any>(this.URL + `update/${id}`, project);
 }
-public delete(id:number): Observable<any>{
-  return this.httpClient.delete<any>(this.proURL + `delete/${id}`);
+public delete(id: number): Observable<any>{
+  return this.httpClient.delete<any>(this.URL + `delete/${id}`);
 }
 
 }

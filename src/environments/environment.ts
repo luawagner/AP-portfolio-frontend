@@ -14,7 +14,7 @@ export const environment = {
     measurementId: 'G-ZSMBEKSXP9',
   },
   production: false,
-  URL: "http://localhost:8080/"
+  URL: "https://backend-portfoliolaw.onrender.com/"
 };
 
 /*

@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class EducacionService {
-  URLprod = environment.URL
+  URLprod = "https://backend-portfoliolaw.onrender.com/"
 URL = this.URLprod + 'educacion/';
 constructor(private httpClient : HttpClient) { }
 

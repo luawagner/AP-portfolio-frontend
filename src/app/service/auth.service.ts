@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class AuthService {
-  URLprod = environment.URL
+  URLprod = "https://backend-portfoliolaw.onrender.com/"
 authURL= this.URLprod + 'auth/';
 
   constructor(private httpClient: HttpClient) { }
