@@ -13,13 +13,12 @@ export class NewProjectComponent implements OnInit {
   nombreP: string = '';
   descriptionP: string= '';
   ImgP: string = '';
-  githubP: string='';
   urlP: string='';
+  githubP: string='';
 
 
 
-  constructor(private sProject: SProjectService, private router: Router, private activatedRouter: ActivatedRoute,
-    public  imageService: ImageService) { }
+  constructor(private sProject: SProjectService, private router: Router, public  imageService: ImageService, private activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.imageService.clearUrl()
@@ -27,9 +26,10 @@ export class NewProjectComponent implements OnInit {
   }
 
 onCreate():void{
+  const urlFirebase= this.imageService.url;
 
-  this.ImgP = this.imageService.url
-  const project = new Project(this.nombreP, this.descriptionP, this.ImgP, this.githubP, this.urlP);
+  this.ImgP = urlFirebase;
+  const project = new Project(this.nombreP, this.descriptionP, this.ImgP, this.urlP, this.githubP);
   this.sProject.save(project).subscribe(
     data =>{
       alert("Projecto añadido");

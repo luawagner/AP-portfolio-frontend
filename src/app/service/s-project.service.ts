@@ -9,9 +9,9 @@ import { Project } from '../model/project';
 })
 export class SProjectService {
   URLprod = "https://backend-portfoliolaw.onrender.com/"
-URL = this.URLprod + 'projects/'
+URL = this.URLprod + 'projects/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 public lista(): Observable<Project[]>{
   return this.httpClient.get<Project[]>(this.URL + 'lista')
 }

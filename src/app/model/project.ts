@@ -1,8 +1,8 @@
 export class Project {
 
-  id? : number;
+  id?: number;
   nombreP: string;
-  descriptionP : string;
+  descriptionP: string;
   imgP: string;
   urlP:string;
   githubP: string;
@@ -12,7 +12,7 @@ constructor(nombreP: string, descriptionP: string, imgP: string, urlP: string, g
   this.descriptionP = descriptionP;
   this.imgP = imgP;
   this.urlP = urlP;
-  this.githubP = githubP;
+  this.githubP = githubP
 
 }
 

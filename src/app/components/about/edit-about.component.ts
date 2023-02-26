@@ -12,12 +12,15 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class EditAboutComponent implements OnInit {
 persona: persona = null;
 
-  constructor(private activatedRouter: ActivatedRoute,
+  constructor(
     private personaService: PersonaService,
+    private activatedRouter: ActivatedRoute,
     private router: Router,
-    public  imageService: ImageService) { }
+    public  imageService: ImageService,
+    ) { }
 
   ngOnInit(): void {
+    this.imageService.clearUrl()
     const id = this.activatedRouter.snapshot.params['id'];
     this.personaService.detail(id).subscribe(
       data =>{
@@ -42,8 +45,8 @@ persona: persona = null;
     )
   }
   uploadImage($event: any){
-    const id = this.activatedRouter.snapshot.params['id'];
-    const name = "img_" + id + Date.now();
+
+    const name = "img_" + Date.now();
     this.imageService.uploadImage($event, name)
   }
 }
